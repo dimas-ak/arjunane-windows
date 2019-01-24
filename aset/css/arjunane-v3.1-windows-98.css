@@ -1,0 +1,81 @@
+/*
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+*/
+/* 
+    Created on : UNKNOWN
+    Author     : Dimas Awang Kusuma
+*/
+
+/*-=[TASKBAR 98]=-*/
+.taskbar-98{position:fixed;overflow-x: auto;white-space: normal;bottom:0;left:0;right:0;background:#bdbdbd;border-top: 1px solid #000;font-size:0;z-index: 12;color:#000;}
+.taskbar-98:after{left:0;right:0;top:0;height:1px;background:#FFF;content:'';position:absolute;}
+.taskbar-98 .body{width:100%;;padding: 1.5px 1.5px 1.5px 90px;}
+.taskbar-98 .icon-start{padding-left:5px;display:flex;display:-webkit-flex;align-items:center;-webkit-align-items:center;height:100%;width:75px;position:absolute;top:0px;left:0px;bottom:0;top:0;}
+.taskbar-98 .icon-start img{border: 2px outset #CCC;width:75px;overflow:hidden;}
+.taskbar-98 .icon-start img.aktif{border: 2px inset #CCC;}
+.taskbar-98 .icon-start:hover img{border: 2px inset #CCC}
+.taskbar-98 .search{width:300px;display: inline-block;position: relative;margin-right:5px;}
+.taskbar-98 .background-search{position:absolute;top:0;left:0;right:0;bottom:0;background:#222;z-index: -1;transition:.5s;-webkit-transition:.5s;}
+.taskbar-98 .btn-search{width:45px;position: relative;display: inline-block;height:35px;float:left;}
+.taskbar-98 .btn-search button{background: transparent;padding:5px;border: none !important;height:35px;width:45px;}
+.taskbar-98 .btn-search img{width:30px;position:absolute;top:0;left:0;right:0;bottom:0;margin:auto;}
+.taskbar-98 input{border: none !important;padding:9.5px;background: transparent;width:250px;float:left;}
+.taskbar-98 input:focus ~ .background-search{background:#000;}
+.taskbar-98 .icon{overflow: hidden;border: 2px outset transparent;width:40px;padding:5px;text-align: center;height:35px;position: relative;display: inline-block;margin-right:5px;transition:.5s;-webkit-transition:.5s;}
+.taskbar-98 .icon:hover{border: 2px outset #CCC;}
+.taskbar-98 .icon.aktif{border: 2px inset #CCC;}
+.taskbar-98 .icon.minimize{border: 2px outset #CCC;}
+.taskbar-98 .icon img{width:25px;position:absolute;top:0;left:0;right:0;bottom:0;margin:auto;}
+.taskbar-98 .body .right{float:right;height:100%;font-size: 10pt;margin-right:10px;}
+.taskbar-98 .body .right .info{display: inline-block;padding:7.5px;cursor: default;margin-right:5px;}
+.taskbar-98 .body .right .info:hover{background: rgba(132,132,132,.5);}
+/*-=[/TASKBAR 98]=-*/
+
+/*-=[START 98]=-*/
+.start-98{left:0;right:0;position:fixed;z-index: 10;bottom:0;overflow: hidden;height:0;}
+.start-98.aktif{top:0;height:inherit;}
+.start-98 .body{width:300px;height:100%;padding-top:50px;}
+.start-98 .body .container{position:relative;width:100%;height:100%;display:flex;display:-webkit-flex;height:100%;border: 2px outset #FFF;}
+.start-98 .body .container .left{width:30px;height:100%;background:linear-gradient(#000084 70%,#0000ff,#000084);position:relative;}
+.start-98 .body .container .left .text{transform: rotate(-90deg);-webkit-transform:rotate(-90deg);color:#FFF;font-weight:bold;white-space: nowrap;position:absolute;left:-52.5px;bottom:80px;font-size: 18pt;}
+.start-98 .body .container .right{width:100%;height:100%;background:#bdbdbd;display: flex;display:-webkit-flex;flex-flow: column;-webkit-flex-flow: column;overflow-y: auto;}
+.start-98 .body .container .right .box{width:100%;position:relative;padding: 10px 0;display:flex;display:-webkit-flex;justify-content: space-between;flex-flow: column wrap;}
+.start-98 .body .container .right .box.border:after{position:absolute;bottom:0;left:0;right:0;width:95%;margin:auto;border:1.5px inset #CCC;content:'';margin-top:20px;}
+.start-98 .body .container .right .box .content{position:relative;cursor: default;width:100%;display:flex;display:-webkit-flex;align-items:center;-webkit-align-items:center;padding:5px;}
+.start-98 .body .container .right .box .content .icon{width: 40px;display: inline-block;margin-right:10px;}
+.start-98 .body .container .right .box .content .icon img{width:100%;display:block;}
+.start-98 .body .container .right .box .content .text{width: 90%;overflow:hidden;text-overflow:ellipsis;white-space: nowrap;}
+.start-98 .body .container .right .box .content:hover{background:#000084;color:#FFF;}
+.start-98 .body .container .right .box .content.sub:after{height:0px;width:0;margin:auto;right:10px;top:0;bottom:0;border-left:7.5px solid #000;border-top: 7.5px solid transparent;border-bottom:7.5px solid transparent;content:'';position:absolute;}
+.start-98 .body .container .right .box .content.sub:hover:after{border-left-color: #FFF;}
+.start-98 .body .container .right .box .content.sub.aktif{background:#000084;color:#FFF;}
+.start-98 .body .container .right .box .content.sub.aktif:after{border-left-color: #FFF;}
+.start-98 .body .container .sub-menu{width:100%;position:absolute;left:100%;top:0;display:none;background:#bdbdbd;color:#000;border:2px outset #CCC;}
+.start-98 .body .container .sub-menu.aktif{display:block;}
+.start-98 .body .container .sub-menu .content{cursor: default;width:100%;display:flex;display:-webkit-flex;align-items:center;-webkit-align-items:center;padding:5px;}
+.start-98 .body .container .sub-menu .content .icon{width:25px;display: inline-block;margin-right:10px;}
+.start-98 .body .container .sub-menu .content .icon img{width:100%;display:block;}
+.start-98 .body .container .sub-menu .content .text{width:100%;overflow:hidden;text-overflow:ellipsis;white-space: nowrap;}
+.start-98 .body .container .sub-menu .content:hover{background:#000084;color:#FFF;}
+.start-98 .body .container .right .box:last-child{margin-top:auto;}
+/*-=[/START 98]=-*/
+
+
+/*-=[LANGUAGE]=-*/
+.language{color:#000;position:fixed;right:0;width:270px;padding:5px 0;z-index: 15;background:#bdbdbd;bottom:-100%;border:1.5px outset #CCC;}
+.language.aktif{bottom:36px}
+.language .content{border: 1px inset transparent;font-size:0px;position:relative;width:100%;display: flex;display:-webkit-flex;-webkit-align-items: center;align-items: flex-start;cursor: default;}
+.language .content.aktif:after{font-size:10pt;content:'\221A';position:absolute;left:5px;top:15%;bottom:0;margin:auto;font-weight:bold;}
+.language .content:hover{border:1px inset #CCC;}
+.language .content .country{font-size:10pt;width:50px;padding:5px 5px;vertical-align: top;background:#bdbdbd;text-align: right;}
+.language .content .info span{font-size:10pt;padding:5px 10px;display: block;}
+/*-=[/LANGUAGE]=-*/
+
+@media screen and (-ms-high-contrast: active), (-ms-high-contrast: none) {
+    .start-98 .body .container .right .box{width: 250px}
+}
+@media only screen and (max-width: 720px){
+    .taskbar-98 .body {width:800px;}
+}

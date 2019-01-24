@@ -1,0 +1,114 @@
+/*
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+*/
+/* 
+    Created on : UNKNOWN
+    Author     : DIMAS AWANG KUSUMA
+*/
+
+/*-=[TASKBAR]=-*/
+.taskbar{position:fixed;overflow-x: auto;white-space: normal;bottom:0;left:0;right:0;background:#000;border-top: 1px solid #000;font-size:0;z-index: 2;}
+.taskbar .body {width:100%;}
+.taskbar .icon-start{width:40px;background:#444;padding:5px;transition:.5s;-webkit-transition:.5s;display: inline-block;float:left;}
+.taskbar .icon-start:hover{background:#000;}
+.taskbar .icon-start img{width:100%;overflow:hidden;}
+.taskbar .search{width:300px;display: inline-block;position: relative;margin-right:5px;}
+.taskbar .background-search{position:absolute;top:0;left:0;right:0;bottom:0;background:#222;z-index: -1;transition:.5s;-webkit-transition:.5s;}
+.taskbar .btn-search{width:45px;position: relative;display: inline-block;height:35px;float:left;}
+.taskbar .btn-search button{background: transparent;padding:5px;border: none !important;height:35px;width:45px;}
+.taskbar .btn-search img{width:30px;position:absolute;top:0;left:0;right:0;bottom:0;margin:auto;}
+.taskbar input{border: none !important;padding:9.5px;background: transparent;color:#FFF;width:250px;float:left;}
+.taskbar input:focus ~ .background-search{background:#000;}
+.taskbar .icon{width:50px;padding:5px;text-align: center;height:35px;position: relative;display: inline-block;margin-right:5px;}
+.taskbar .icon:after{position:absolute;height:2px;background:#9b59b6;width:0;bottom:0;left:0;content:'';transition:.5s;-webkit-transition:.5s;z-index: 1;}
+.taskbar .icon:before{position:absolute;height:0%;background:rgba(255,255,255,.2);width:100%;bottom:0;left:0;content:'';transition:.5s;-webkit-transition:.5s;}
+.taskbar .icon:hover:after{width:100%;}
+.taskbar .icon.aktif:after{width:100%;}
+.taskbar .icon.minimize:after{width:100%;}
+.taskbar .icon:hover:before{height:100%;}
+.taskbar .icon.aktif:before{height:100%;}
+.taskbar .icon.minimize:before{height:0%;}
+.taskbar .icon img{width:25px;position:absolute;top:0;left:0;right:0;bottom:0;margin:auto;}
+.taskbar .body .right{float:right;height:100%;font-size: 10pt;display: flex;display: -webkit-box;display: -ms-box;display: -webkit-flex;-webkit-align-items: center;align-items: center;padding:1.5px;margin-right:10px;}
+.taskbar .body .right .info{color:#FFF;display: inline-block;padding:7.5px;cursor: default;}
+.taskbar .body .right .info:hover{background: rgba(255,255,255,.1);}
+/*-=[/TASKBAR]=-*/
+
+/*-=[LANGUAGE]=-*/
+.language{color:#FFF;position:fixed;right:0;width:300px;padding:5px 0;z-index: 15;background:#444;bottom:-100%;}
+.language .content{width:100%;padding:15px 10px;display: flex;display:-webkit-flex;-webkit-align-items: center;align-items: flex-start;cursor: default;}
+.language .content.aktif{background:#3498db;}
+.language .content:hover{background:#555}
+.language .content.aktif:hover{background:#3498db}
+.language .content .country{font-weight:bold;margin: 0 30px 0 15px;vertical-align: top;}
+.language .content .info span{display: block;}
+/*-=[/LANGUAGE]=-*/
+
+/*-=[START]=-*/
+.start{width:100%;background:transparent;position: fixed;left:0;height:0;bottom:0;transition:.5s;-webkit-transition:.5s;font-size: 11pt;}
+.start .body{flex: 1 1 0;background:rgba(0,0,0,.9);width:300px;height:100%;overflow: hidden;padding:10px;transition:.5s;-webkit-transition:.5s;display:-moz-box;display:-webkit-box;display:-ms-flexbox;display: flex;display:-webkit-flex;position:relative;}
+.start .body.aktif{width:750px;position:relative;}
+.start .body.aktif:after{width:750px;}
+.start .body-left{float:left;overflow:hidden;width:250px;color:#ecf0f1;height:100%;position:relative;display: flex;display:-webkit-flex;flex-direction: column;-webkit-flex-direction:column;}
+.start .body-left.list{display:none;}
+.start .body-left.list.aktif{display:flex;display:-webkit-flex;}
+.start .body-left .body-left-content{height:0;overflow: hidden;transition:.5s;-webkit-transition:.5s;}
+.start .body-left .body-left-content.aktif{overflow-y:auto;display: flex;display: -webkit-flex;-webkit-flex-flow: wrap;flex-flow: wrap;-webkit-justify-content: space-between;justify-content: space-between;width:100%;height:100%;}
+
+.start .body-right{float:left;width:0;transition:.5s;-webkit-transition:.5s;height:100%;overflow: hidden;position:relative;overflow-y: auto;}
+.start .body-right.aktif{width:470px;padding-left:10px;display: inline-block;}
+.start .body-right .title{width:100%;color:#bdc3c7;padding:10px;margin-top:5px;}
+.start .body-right .info{width:100%;color:#ecf0f1;}
+.start .body-right .info .content-1{width:141.6px;color:#bdc3c7;color:#ecf0f1;background:#0078d7;height:120px;position:relative;margin:0 5px 5px 0;float:left;}
+.start .body-right .info .content-1 .photo{width:100px;height:90px;position:relative;margin:auto;}
+.start .body-right .info .content-1 .photo img{width:50%;display:block;position:absolute;top:0;bottom:0;left:0;right:0;margin:auto;}
+.start .body-right .info .content-1 .text{width:100%;padding:5px;}
+.start .body-right .info .content-1:hover{background:#2980b9;}
+.start .body-right .info .content-2{width:288px;color:#bdc3c7;color:#ecf0f1;background:#0078d7;height:120px;position:relative;float:left;margin:0 5px 5px 0;}
+.start .body-right .info .content-2 .photo{width:125px;height:90px;position:relative;margin:auto;}
+.start .body-right .info .content-2 .photo img{width:50%;display:block;position:absolute;top:0;bottom:0;left:0;right:0;margin:auto;}
+.start .body-right .info .content-2 .text{width:100%;padding:5px;}
+.start .body-right .info .content-2:hover{background:#2980b9;}
+.start .user{width: 100%;float:left;position:relative;display: flex;display:-webkit-flex;align-items: center;-webkit-align-items: center;padding:5px;margin-bottom:20px;cursor: pointer;}
+.start .user .body-sub-user{transition:.5s;-webkit-transition:.5s;height:0;overflow:hidden;width:100%;z-index: 1;position:absolute;top:100%;left:0;right:0;background:#444;}
+.start .user .body-sub-user .sub-user{padding: 15px 5px;transition:.5s;-webkit-transition:.5s;background:transparent;}
+.start .user .body-sub-user .sub-user:hover{background:#2c3e50;}
+.start .user img{width:40px;border-radius: 100%;-webkit-border-radius:100%;}
+.start .user span{display: inline-block;padding-left:5px;overflow: hidden;white-space: nowrap;text-overflow:ellipsis}
+.start .body-left .body-left-content .navigation{width:100%;margin:10px 0;white-space: normal}
+.start .body-left .body-left-content .navigation .title{margin:10px 0;color:#bdc3c7;width:100%;}
+.start .body-left .body-left-content .navigation .content{color:#ecf0f1;cursor: pointer;width:100%;flex:1;display: flex;display:-webkit-flex;align-items: center;-webkit-align-items: center;transition:.5s;-webkit-transition:.5s;padding:2.5px 0 2.5px 5px;cursor: pointer;}
+.start .body-left .body-left-content .navigation .recent{max-height:250px;overflow-y:auto;}
+.start .body-left .body-left-content .navigation .recent a{width:100%;color:#ecf0f1;}
+.start .body-left .body-left-content .navigation .recent a:hover{width:100%;color:#FFF;}
+.start .body-left .body-left-content .navigation .recent a .content img{width:40px;background:#FFF;flex-basis: 40px;-webkit-flex-basis:40px;flex-grow: 0;flex-shrink: 0;-webkit-flex-grow:0;-webkit-flex-shrink:0;}
+.start .body-left .body-left-content .navigation .recent a .content:hover{background:#333;}
+.start .body-left .body-left-content .navigation .recent a .content span{width:100%;display: block;padding-left:5px;overflow: hidden;white-space: nowrap;padding-right:10px;text-overflow:ellipsis}
+.start .body-left.list .wrap {width:100%;overflow-y:auto;height:100%;display:flex;display:-webkit-flex;flex-direction: column;-webkit-flex-direction:column;}
+.start .body-left .navigation{width:100%;margin:10px 0;white-space: normal;}
+.start .body-left .navigation a{width:100%;}
+.start .body-left .navigation .title{margin:10px 0;color:#bdc3c7;width:100%;}
+.start .body-left .navigation .content{color:#ecf0f1;cursor: pointer;width:100%;flex:1;display: flex;display:-webkit-flex;align-items: center;-webkit-align-items: center;transition:.5s;-webkit-transition:.5s;padding:2.5px 0 2.5px 5px;cursor: pointer;}
+.start .body-left .navigation .content img{width:40px;background:#FFF;flex-basis: 40px;-webkit-flex-basis:40px;flex-grow: 0;flex-shrink: 0;-webkit-flex-grow:0;-webkit-flex-shrink:0;}
+.start .body-left .navigation .content:hover{background:#333;}
+.start .body-left .navigation .content span{display: block;padding-left:5px;overflow: hidden;white-space: nowrap;padding-right:10px;text-overflow:ellipsis}
+.start .body-left.list .wrap .navigation{width:100%;margin:10px 0;white-space: normal;flex: 0 0 auto;}
+.start .body-left.list .wrap .navigation a{width:100%;}
+.start .body-left.list .wrap .navigation .title{margin:10px 0;color:#bdc3c7;width:100%;}
+.start .body-left.list .wrap .navigation .content{color:#ecf0f1;cursor: pointer;width:100%;flex:1;display: flex;display:-webkit-flex;align-items: center;-webkit-align-items: center;transition:.5s;-webkit-transition:.5s;padding:2.5px 0 2.5px 5px;cursor: pointer;}
+.start .body-left.list .wrap .navigation .content img{width:40px;background:#FFF;flex-basis: 40px;-webkit-flex-basis:40px;flex-grow: 0;flex-shrink: 0;-webkit-flex-grow:0;-webkit-flex-shrink:0;}
+.start .body-left.list .wrap .navigation .content:hover{background:#333;}
+.start .body-left.list .wrap .navigation .content span{display: block;padding-left:5px;overflow: hidden;white-space: nowrap;padding-right:10px;text-overflow:ellipsis}
+.start .body-panel {width:100%;margin-bottom:5px;display:flex;display:-webkit-flex;margin-top:auto;flex-direction:column;-webkit-flex-direction:column;}
+.start .body-panel .content{cursor: pointer;width:100%;flex:1;display: flex;display:-webkit-flex;align-items: center;-webkit-align-items: center;transition:.5s;-webkit-transition:.5s;padding:7.5px 0 7.5px 5px;}
+.start .body-panel .content:hover{background:#444;}
+.start .body-panel .content img{width: 25px;flex-basis: 25px;-webkit-flex-basis:25px;flex-grow: 0;flex-shrink: 0;-webkit-flex-grow:0;-webkit-flex-shrink:0;}
+.start .body-panel .content span{display: inline-block;margin-left:10px;}
+.start.aktif{height:90%;}
+/*-=[/START]=-*/
+
+@media only screen and (max-width: 720px){
+    .taskbare .body {width:800px;}
+}
